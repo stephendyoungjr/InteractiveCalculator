@@ -8,7 +8,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #282c34; /* Fallback color */
+  background-color: #36253B; /* Dark background */
 }
 
 /* Pixel 3D Calculator Grid */
@@ -16,59 +16,64 @@ body, html {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: repeat(4, 40px); /* Reduced size */
-  grid-template-rows: minmax(80px, auto) repeat(5, 40px); /* Reduced size */
-  box-shadow: 6px 6px 0 #3a3a3a;
-  background-color: #fafafa;
-  border: 6px solid #3a3a3a;
-  border-radius: 10px;
+  grid-template-columns: repeat(4, 30px); /* Smaller and narrower buttons */
+  grid-template-rows: minmax(50px, auto) repeat(5, 30px); /* Smaller size */
+  box-shadow: 4px 4px 0 #262626; /* Darker shadow */
+  background-color: #464646; /* Dark grey background */
+  border: 4px solid #2F2F2F; /* Darker border */
+  border-radius: 8px; /* More rounded edges */
   padding: 8px;
-  gap: 8px; /* Adjusted gap */
+  gap: 6px; /* Smaller gap */
 }
 
 /* Output Display Styling */
+
 .output {
   grid-column: 1 / -1;
   background-color: #333;
-  color: white;
-  font-size: 1.2rem; /* Reduced font size */
+  color: #00FF00; /* Green display text */
+  font-size: 0.9rem; /* Slightly smaller font size */
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: inset 3px 3px 0 #3a3a3a;
-  height: 30px; /* Adjusted height */
+  justify-content: flex-end; /* Align text to the right */
+  padding: 10px; /* Keep the padding for space around text */
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 0 #1F1F1F;
+  height: 50px; /* Further increase height for more space */
+  overflow: hidden; /* Prevent numbers from overflowing */
+  text-overflow: ellipsis; /* Adds "..." if the content overflows */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-bottom: 5px; /* Add margin to separate from buttons */
 }
+
 
 /* Calculator Buttons Styling */
 button {
-  font-size: 1.2rem; /* Reduced font size */
-  border: 2px solid #3a3a3a;
-  background-color: #fafafa;
-  box-shadow: 3px 3px 0 #3a3a3a;
-  border-radius: 3px;
+  font-size: 0.8rem; /* Smaller font size */
+  border: 2px solid #1F1F1F; /* Darker border */
+  background-color: #5A5A5A; /* Darker button background */
+  color: #FFFFFF; /* White button text */
+  box-shadow: 2px 2px 0 #262626; /* Darker shadow */
+  border-radius: 5px; /* Slightly more rounded edges */
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
 button:active {
-  box-shadow: 1px 1px 0 #3a3a3a;
+  box-shadow: 1px 1px 0 #262626;
   transform: translate(1px, 1px); /* Adjusted transform */
 }
 
-/* Span Two for AC and = Buttons */
+/* Special Buttons */
 .span-two {
   grid-column: span 2;
-  background-color: #ffcc00;
+  background-color: #A6524E; /* Orange color for the equal button */
 }
 
 button.operation {
-  background-color: #ff6666;
-}
-
-button.digit {
-  background-color: #cccccc;
+  background-color: #8A8A8A; /* Lighter grey for operation buttons */
 }
 
 button.digit:hover, button.operation:hover {
