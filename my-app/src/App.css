@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Reset basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #282c34; /* Fallback color */
+}
+
+/* Pixel 3D Calculator Grid */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 40px); /* Reduced size */
+  grid-template-rows: minmax(80px, auto) repeat(5, 40px); /* Reduced size */
+  box-shadow: 6px 6px 0 #3a3a3a;
+  background-color: #fafafa;
+  border: 6px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 8px;
+  gap: 8px; /* Adjusted gap */
+}
+
+/* Output Display Styling */
+.output {
+  grid-column: 1 / -1;
+  background-color: #333;
   color: white;
+  font-size: 1.2rem; /* Reduced font size */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: inset 3px 3px 0 #3a3a3a;
+  height: 30px; /* Adjusted height */
 }
 
-.App-link {
-  color: #61dafb;
+/* Calculator Buttons Styling */
+button {
+  font-size: 1.2rem; /* Reduced font size */
+  border: 2px solid #3a3a3a;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 0 #3a3a3a;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  box-shadow: 1px 1px 0 #3a3a3a;
+  transform: translate(1px, 1px); /* Adjusted transform */
+}
+
+/* Span Two for AC and = Buttons */
+.span-two {
+  grid-column: span 2;
+  background-color: #ffcc00;
+}
+
+button.operation {
+  background-color: #ff6666;
+}
+
+button.digit {
+  background-color: #cccccc;
+}
+
+button.digit:hover, button.operation:hover {
+  filter: brightness(1.2);
 }
