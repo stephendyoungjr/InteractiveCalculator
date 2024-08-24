@@ -1,4 +1,3 @@
-/* Reset basic styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -8,53 +7,48 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #36253B; /* Dark background */
+  background-color: #36253B;
 }
 
-/* Pixel 3D Calculator Grid */
 .calculator-grid {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: repeat(4, 30px); /* Smaller and narrower buttons */
-  grid-template-rows: minmax(50px, auto) repeat(5, 30px); /* Smaller size */
-  box-shadow: 4px 4px 0 #262626; /* Darker shadow */
-  background-color: #464646; /* Dark grey background */
-  border: 4px solid #2F2F2F; /* Darker border */
-  border-radius: 8px; /* More rounded edges */
+  grid-template-columns: repeat(4, 30px);
+  grid-template-rows: minmax(50px, auto) repeat(5, 30px);
+  box-shadow: 4px 4px 0 #262626;
+  background-color: #464646;
+  border: 4px solid #2F2F2F;
+  border-radius: 8px;
   padding: 8px;
-  gap: 6px; /* Smaller gap */
+  gap: 6px;
 }
-
-/* Output Display Styling */
 
 .output {
   grid-column: 1 / -1;
   background-color: #333;
-  color: #00FF00; /* Green display text */
-  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #00FF00;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Align text to the right */
-  padding: 10px; /* Keep the padding for space around text */
+  justify-content: flex-end;
+  padding: 10px;
   border-radius: 4px;
   box-shadow: inset 2px 2px 0 #1F1F1F;
-  height: 50px; /* Further increase height for more space */
-  overflow: hidden; /* Prevent numbers from overflowing */
-  text-overflow: ellipsis; /* Adds "..." if the content overflows */
-  white-space: nowrap; /* Prevent text from wrapping */
-  margin-bottom: 5px; /* Add margin to separate from buttons */
+  height: 50px;
+  overflow-x: auto;
+  text-overflow: initial;
+  white-space: nowrap;
+  margin-bottom: 5px;
 }
 
-
-/* Calculator Buttons Styling */
 button {
-  font-size: 0.8rem; /* Smaller font size */
-  border: 2px solid #1F1F1F; /* Darker border */
-  background-color: #5A5A5A; /* Darker button background */
-  color: #FFFFFF; /* White button text */
-  box-shadow: 2px 2px 0 #262626; /* Darker shadow */
-  border-radius: 5px; /* Slightly more rounded edges */
+  font-size: 0.8rem;
+  border: 2px solid #1F1F1F;
+  background-color: #5A5A5A;
+  color: #FFFFFF;
+  box-shadow: 2px 2px 0 #262626;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   width: 100%;
@@ -63,17 +57,16 @@ button {
 
 button:active {
   box-shadow: 1px 1px 0 #262626;
-  transform: translate(1px, 1px); /* Adjusted transform */
+  transform: translate(1px, 1px);
 }
 
-/* Special Buttons */
 .span-two {
   grid-column: span 2;
-  background-color: #A6524E; /* Orange color for the equal button */
+  background-color: #A6524E;
 }
 
 button.operation {
-  background-color: #8A8A8A; /* Lighter grey for operation buttons */
+  background-color: #8A8A8A;
 }
 
 button.digit:hover, button.operation:hover {
