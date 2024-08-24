@@ -3,12 +3,11 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "install-client": "cd my-app && npm install",
-      "build": "cd my-app && npm run build",
-      "start": "cd my-app && serve -s build"
+        "install-client": "cd my-app && npm install",
+        "build": "cd my-app && npm run build",
+        "start": "serve -s my-app/build"
     },
     "dependencies": {
-      "serve": "^14.0.1"
+        "serve": "^14.2.3"
     }
-  }
-  
+}
